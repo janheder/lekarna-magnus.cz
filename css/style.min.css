@@ -1,0 +1,338 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 16px;
+    background-color: #056839;
+    background-image: url("../img/bg.png");
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    color: #056839;
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5{
+    font-weight: 500;
+}
+h1{
+    font-size: 34px;
+    text-transform: uppercase;
+    margin: 0;
+    padding-bottom: 40px;
+}
+strong{
+    font-weight: 500;
+}
+img{
+    width: auto;
+    max-width: 100%;
+}
+a{
+    color: #056839;
+}
+.micromodal-slide{
+    display: none;
+}
+.container{
+    max-width: 990px;
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+.btn{
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px;
+    width: 100%;
+    color: white;
+    background-image: linear-gradient(#9a143f, #5a000f);
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.8);
+}
+
+header{
+    padding-top: 20px;
+}
+
+.header-inner{
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(#fff, #fafafa);
+    border: 8px solid rgba(0,0,0,0.2);
+    background-clip: padding-box;
+    padding: 10px 20px;
+}
+.header-inner a{
+    display: flex;
+    text-decoration: none;
+}
+.header-inner nav{
+    display: flex;
+    align-items: center;
+}
+.header-inner nav a{
+    display: flex;
+    padding: 8px 25px;
+    font-size: 18px;
+    border-right: 1px dotted #282828;
+}
+.header-inner nav a:last-child{
+    border: 0;
+}
+.hero{
+    padding: 0px 0;
+    margin-bottom: -40px;
+}
+.hero .container{
+    display: flex;
+    align-items: center;
+    background: radial-gradient(rgba(81, 255, 172, 0.4), transparent 70%);
+}
+.hero-img{
+    flex-shrink: 0;
+    width: 45%;
+    display: flex;
+}
+.hero-content{
+    background: rgba(0,0,0,0.25);
+    color: white;
+    padding: 60px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: -120px;
+}
+.hero-content h1{
+    text-transform: none;
+    padding-bottom: 25px;
+}
+.hero-content a{
+    color: white;
+}
+.hero-content .text_obsah_text{
+    margin-top: 0;
+    margin-bottom: 25px;
+    line-height: 1.4;
+    font-size: 15px;
+}
+.hero-content .btn{
+    font-size: 18px;
+}
+
+.news{
+    background-color: #ecfaf3;
+    padding: 60px 0;
+    border-top: 8px solid rgba(0,0,0,0.2);
+    border-bottom: 8px solid rgba(0,0,0,0.2);
+    background-clip: padding-box;
+}
+.news h1{
+    text-align: center;
+    color: #056839;
+}
+.novinka_obal{
+    background: white;
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+}
+.novinka_datum{
+    background-image: linear-gradient(to right, #ecfaf3 0% 50%, #ffffff 50% 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+.novinka_datum_in{
+    background: #056839;     
+    padding: 10px 8px;    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.novinka_datum b{
+    font-weight: 500;
+}
+.novinka_obal_stred{
+    padding: 20px;
+}
+.novinka_obal_stred h2{
+    font-size: 24px;
+}
+.novinka_obal_stred p{
+    font-size: 13px;
+    line-height: 1.4;
+}
+.novinka_detail{
+
+}
+.contact{
+    background-color: transparent;
+    padding: 50px 0;
+}
+.contact h1{
+    text-align: center;
+    color: white;
+}
+
+.products{
+    background-color: #ecfaf3;
+    padding: 60px 0;
+    border-top: 8px solid rgba(0,0,0,0.2);
+    border-bottom: 8px solid rgba(0,0,0,0.2);
+    background-clip: padding-box;
+}
+.products h1{
+    text-align: center;
+    color: #056839;
+}
+.products-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+.produkt_obal{
+    position: relative;
+    background-color: #fff;
+    text-decoration: none;
+}
+.produkt_cena{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #c5ead8;
+    color: #056839;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 20px;
+}
+.produkt_obr{
+    padding-bottom: 70%;
+    position: relative;
+    border: 5px solid #056839;
+}
+.produkt_obr-wrap{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.produkt_obr img{
+    max-width: 100%;
+    max-height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+.produkt_nazev{
+    padding: 15px;
+    color: #056839;
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none;
+}
+.produkt_cart{
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.5)
+}
+
+.other-pharmacies{
+    padding-top: 80px;
+}
+.other-pharmacies h1{
+    color: white;
+    text-align: center;
+}
+.other-pharmacies-wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    padding-bottom: 10px;
+    background: rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+}
+
+.other-logos{
+    display: block;
+    padding: 0px;
+    background: #ffffff;
+    margin-bottom: 30px;
+}
+.other-logos h3{
+    color: #262626;
+    text-align: center;
+    background: #ffffff;
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+.other-logos-wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.pharmacies{
+    background: rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+}
+.pharmacies h3{
+    color: #fff;
+    text-align: center;
+    background: rgba(0,0,0,0.2);
+    margin: 0;
+    padding: 20px 0;
+
+}
+.pharmacies-wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    padding: 20px;
+}
+.pharmacies-wrap a{
+    text-align: center;
+}
+.copyright{
+    background-color: #ecfaf3;
+    border-top: 8px solid rgba(0,0,0,0.2);
+    background-clip: padding-box;
+    padding: 38px 0 30px 0;
+    color: #056839;
+}
+.copyright__wrap{
+    display: flex;
+    font-size: 12px;
+}
+.copyright__wrap a{
+
+}
+.copyright__author{
+    padding-left: 10px;
+}
+
+.sipka_plovouci{
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
