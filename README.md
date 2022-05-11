@@ -1,0 +1,2 @@
+# lekarna-magnus.cz
+ 
