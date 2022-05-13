@@ -1,0 +1,566 @@
+object, iframe
+{
+margin: 0px;
+padding: 0px;
+border: 0px;
+}
+
+
+body
+{
+padding: 0px;
+margin: 0px;
+color: #ffffff;
+font-family: Arial, Verdana, Tahoma;
+font-size: 14px;
+background-color: #056839;
+background-image: url('../img/bg.jpg');
+background-position: top center;
+}
+
+.holder
+{
+width: 950px;
+min-height: 600px;
+margin-left: auto;
+margin-right: auto;
+line-height: 140%;
+}
+
+a:link, a:visited
+{
+color: #1187BC;
+text-decoration: underline;
+}
+
+a:hover
+{
+color: #4C8936;
+text-decoration: underline;
+}
+
+form, p
+{
+padding: 0px;
+margin: 0px;
+}
+
+h1
+{
+width: auto;
+color: #ffffff;
+font-size: 40px; 
+font-weight: normal;
+}
+
+
+h2
+{
+width: auto;
+color: #000000;
+font-size: 23px; 
+font-weight: bold;
+padding: 0px;
+margin: 0px;
+}
+
+h2 a:link, h2 a:visited
+{
+color: #000000;
+text-decoration: none;
+}
+
+h2 a:hover
+{
+color: #000000;
+text-decoration: underline;
+}
+
+h3
+{
+width: auto;
+color: #ffffff;
+font-size: 18px; 
+font-weight: bold;
+padding: 0px;
+margin: 0px;
+}
+
+h4
+{
+width: auto;
+color: #ffffff;
+font-size: 14px; 
+font-weight: bold;
+}
+
+.clear
+{
+clear: both;
+width: auto;
+height: 1px;
+font-size: 1px;
+overflow: hidden;
+}
+
+.prvni_blok
+{
+width: auto;
+height: 798px;
+background-image: url('../img/prvni_blok.jpg');
+background-position: top left;
+background-repeat: no-repeat;
+}
+
+.top_menu
+{
+width: auto;
+height: 86px;
+}
+
+.top_menu_logo
+{
+float: left;
+width: 350px;
+height: 84px;
+}
+
+.top_menu_odkazy
+{
+float: right;
+width: 541px;
+height: 35px;
+margin-top: 25px;
+line-height: 35px;
+font-size: 19px;
+color: #056839;
+}
+
+.top_menu_odkazy a
+{ 
+color: #056839;
+text-decoration: none;
+}
+
+.top_menu_odkazy img
+{
+border: 0;
+margin-left: 29px;
+margin-right: 29px;
+vertical-align: middle;
+}
+
+.stred
+{
+width: 950px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.sipka_plovouci
+{
+position: fixed;
+width: 42px;
+height: 135px;
+line-height: 70%;
+margin-top: 220px;
+margin-left: 1020px;
+z-index: 11;
+}
+
+.nadpis_velky
+{
+width: auto;
+font-size: 40px;
+color: #056839;
+text-align: center;
+}
+
+.nadpis_velky2
+{
+width: auto;
+font-size: 40px;
+color: #DDFFEF;
+text-align: center;
+}
+
+.text_obsah
+{
+width: 416px;
+height: 341px;
+float: right;
+margin-top: 194px;
+margin-right: 40px;
+}
+
+.text_obsah_nadpis
+{
+width: auto;
+height: 40px;
+line-height: 40px;
+font-size: 35px;
+color: #ffffff;
+}
+
+.text_obsah_nadpis h1
+{
+font-size: 35px;
+}
+
+.text_obsah_text
+{
+width: auto;
+height: 290px;
+color: #ffffff;
+font-size: 14px;
+overflow: hidden;
+}
+
+.druhy_blok
+{
+width: auto;
+height: 970px;
+background-image: url('../img/druhy_blok.jpg');
+background-position: top center;
+background-repeat: no-repeat;
+}
+
+/* Vertical Accordion Style */
+.va-container{
+	position:relative;
+	margin:40px auto 0 auto;
+}
+.va-wrapper{
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow:hidden;
+	background-color: transparent;
+}
+.va-slice{
+	position:absolute;
+	width:950px;
+	left:0px;
+	overflow:hidden;
+	
+}
+
+
+.va-nav span{
+	width:40px;
+	height:25px;
+	background:transparent url(/img/prev.png) no-repeat center center;
+	position:absolute;
+	top:-35px;
+	left:50%;
+	margin-left:-20px;
+	text-indent:-9000px;
+	opacity:0.7;
+	cursor:pointer;
+	display:none;
+	z-index:100;
+}
+.va-nav span.va-nav-next{
+	background-image:url(/img/next.png);
+	top:auto;
+	bottom:-35px;
+}
+.va-nav span:hover{
+	opacity:1.0;
+}
+
+.novinka_obal
+{
+width: auto;
+}
+
+
+.novinka_obal_stred
+{
+width: auto;
+height: 74px;
+margin-left: 20px;
+margin-right: 20px;
+padding: 20px;
+padding-right: 60px;
+padding-left: 47px;
+color: #4A4A4A;
+font-size: 11px;
+overflow: hidden;
+background-color: #ffffff;
+}
+
+.novinka_obal_stred h2
+{
+font-size: 23px;
+font-weight: bold;
+text-decoration: none;
+}
+
+.novinka_datum
+{
+position: absolute;
+width: 46px;
+height: 92px;
+margin-top: -114px;
+margin-left: 0px;
+z-index: 11;
+background-image: url('../img/novinka_datum.gif');
+background-position: top left;
+background-repeat: no-repeat;
+}
+
+.novinka_datum_in
+{
+width: 46px;
+float: left;
+margin-top: 56px;
+text-align: center;
+font-size: 12px;
+color: #ffffff;
+}
+
+.novinka_detail
+{
+position: absolute;
+width: 66px;
+height: 66px;
+margin-top: -58px;
+margin-left: 884px;
+z-index: 11;
+}
+
+.treti_blok
+{
+width: auto;
+height: 865px;
+background-image: url('../img/bg2.jpg');
+background-position: top center;
+background-repeat: repeat-y;
+}
+
+.treti_blok_in
+{
+width: 950px;
+margin-left: auto;
+margin-right: auto;
+height: 865px;
+background-image: url('../img/treti_blok.jpg');
+background-position: top center;
+background-repeat: no-repeat;
+}
+
+.mapa
+{
+width: 700px;
+height: 361px;
+margin-top: 99px;
+margin-left: auto;
+margin-right: auto;
+cursor: pointer;
+}
+
+.otv_doba
+{
+width: 365px;
+height: 160px;
+margin-top: 48px;
+margin-left: auto;
+margin-right: auto;
+color: #ffffff;
+}
+
+.otv_doba a
+{
+color: #ffffff;
+text-decoration: underline;
+}
+
+.ctvrty_blok
+{
+width: auto;
+height: 896px;
+background-image: url('../img/bg4.gif');
+background-position: top center;
+background-repeat: no-repeat;
+}
+
+.produkt_obal
+{
+float: left;
+width: 308px;
+height: 278px;
+margin-bottom: 32px;
+margin-right: 13px;
+background-image: url('../img/produkt_obal.png');
+background-position: top left;
+background-repeat: no-repeat;
+cursor: pointer;
+}
+
+.produkt_cena
+{
+float: left;
+width: 90px;
+height: 25px;
+line-height: 35px;
+text-align: center;
+color: #056839;
+font-size: 16px;
+font-weight: bold;
+}
+
+.produkt_obr
+{
+width: auto;
+clear: both;
+height: 193px;
+line-height: 193px;
+text-align: center;
+overflow: hiddenů
+}
+
+.produkt_obr img
+{
+vertical-align: middle;
+}
+
+.produkt_nazev
+{
+width: auto;
+height: 52px;
+padding-top: 10px;
+padding-left: 10px;
+padding-right: 10px;
+text-align: center;
+font-size: 16px;
+font-weight: bold;
+color: #056839;
+font-family: Times New Roman, Times, serif
+}
+
+.paty_blok
+{
+width: auto;
+height: 863px;
+background-image: url('../img/bg5.jpg');
+background-position: top center;
+background-repeat: repeat-y;
+}
+
+.paty_blok_in
+{
+width: 950px;
+margin-left: auto;
+margin-right: auto;
+height: 863px;
+background-image: url('../img/paty_blok.jpg');
+background-position: top center;
+background-repeat: no-repeat;
+}
+
+.nadpis_maly
+{
+width: auto;
+height: 53px;
+line-height: 53px;
+font-size: 23px;
+color: #57574A;
+text-align: center;
+}
+
+
+.partneri
+{
+width: auto;
+height: 114px;
+line-height: 114px;
+color: #000000;
+}
+
+.partneri img
+{
+vertical-align: middle;
+border: 0px;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.nadpis_maly2
+{
+width: auto;
+height: 53px;
+line-height: 53px;
+font-size: 23px;
+color: #ffffff;
+text-align: center;
+}
+
+.dalsi_lekarny_obal
+{
+width: auto;
+height: 117px;
+line-height: 117px;
+}
+
+.dalsi_lekarny_obal img
+{
+vertical-align: middle;
+border: 0px;
+padding-left: 14px;
+}
+
+.r
+{
+color: red;
+}
+
+.pata
+{
+width: auto;
+height: 90px;
+background-image: url('../img/pata.gif');
+background-position: top center;
+background-repeat: repeat-x;
+}
+
+.pata_in
+{
+width: 950px;
+margin-left: auto;
+margin-right: auto;
+height: 90px;
+background-image: url('../img/pata_in.gif');
+background-position: top center;
+background-repeat: no-repeat;
+}
+
+.pata_in_leva
+{
+float: left;
+width: 545px;
+height: 30px;
+line-height: 30px;
+font-size: 11px;
+color: #056839;
+margin-top: 35px;
+}
+
+.pata_in_leva a
+{
+color: #056839;
+text-decoration: underline;
+}
+
+.facebjuk
+{
+float: right;
+width: 250px;
+height: 25px;
+margin-top: 35px;
+line-height: 25px;
+text-align: right;
+}
+
+
+

@@ -1,7 +1,9 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+  }
 body {
     overflow-x: hidden;
     font-size: 16px;
@@ -23,6 +25,19 @@ h1{
     margin: 0;
     padding-bottom: 40px;
 }
+@media screen and (max-width: 991px){
+    h1{
+        font-size: 30px;
+        padding-bottom: 30px;
+    }
+}
+@media screen and (max-width: 575px){
+    h1{
+        font-size: 28px;
+        padding-bottom: 30px;
+    }
+}
+
 strong{
     font-weight: 500;
 }
@@ -42,6 +57,12 @@ a{
     padding-left: 20px;
     width: 100%;
     margin: 0 auto;
+}
+@media screen and (max-width: 991px){
+    .container{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
 }
 .btn{
     height: 60px;
@@ -65,7 +86,7 @@ header{
     display: flex;
     justify-content: space-between;
     background-image: linear-gradient(#fff 60%, #d3d3d3);
-    border: 8px solid rgba(0,0,0,0.2);
+    border: 5px solid rgba(0,0,0,0.2);
     background-clip: padding-box;
     padding: 10px 20px;
 }
@@ -75,6 +96,7 @@ header{
 .header-inner a{
     display: flex;
     text-decoration: none;
+    flex-shrink: 0;
 }
 .header-inner nav{
     display: flex;
@@ -89,14 +111,77 @@ header{
 .header-inner nav a:last-child{
     border: 0;
 }
+.nav-togggle{
+        display:none;
+}
+#backdrop {
+    background: rgba(0,0,0,.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 10;
+}
+@media screen and (max-width: 991px){
+    .nav-togggle{
+        display: flex;
+        align-items: center;
+    }
+    .header-inner nav{
+        background: #fff;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        height: 100vh;
+        justify-content: flex-start;
+        transition: .2s ease transform;
+        transform: translateX(-100%);
+        width: 360px;
+        max-width: 80%;
+        z-index: 20;
+        padding-top: 20px;
+    }
+    body.--navActive .header-inner nav {
+        transform: translateX(0%);
+    }
+    .header-inner nav a {
+        display: flex;
+        padding: 12px 25px;
+        width: 100%;
+        font-size: 18px;
+        border-right: 0;
+    }
+    body.--navActive #backdrop {
+        display: flex;
+    }
+}
+@media screen and (max-width: 991px){
+    .header-inner a{
+        height: 50px;
+    }
+}
+
+
 .hero{
     padding: 0px 0;
     margin-bottom: -40px;
+    margin-top: -18px;
 }
+
 .hero .container{
     display: flex;
     align-items: center;
     background: radial-gradient(rgba(81, 255, 172, 0.4), transparent 70%);
+    position: relative;
+}
+.hero .section-symbol{
+    position: absolute;
+    bottom: 32px;
+    right: 0;
 }
 .hero-img{
     flex-shrink: 0;
@@ -129,10 +214,41 @@ header{
 .hero-content .btn{
     font-size: 18px;
 }
+@media screen and (max-width: 991px){
+    .hero .section-symbol{
+        display: none;
+    }
+    .hero .container{
+        
+    }
+}
+@media screen and (max-width: 767px){
+    .hero {
+        margin-top: 10px;
+    }
+    .hero-content{
+        padding: 30px;
+        margin: 0;
+    }
+    .hero-img {
+        width: 40%;
+    }
+    .hero-content h1 {
+        text-transform: none;
+        padding-bottom: 15px;
+        font-size: 26px;
+    }
+}
+@media screen and (max-width: 575px){
+    .hero .container{
+        flex-direction: column;
+    }
+}
 
 .news{
     background-color: #ecfaf3;
-    padding: 60px 0;
+    background-image: linear-gradient(-55deg, #e4f5ec 0% 50%, #ecfaf3 50% 100%);
+    padding: 80px 0 60px 0;
     border-top: 8px solid rgba(0,0,0,0.2);
     border-bottom: 8px solid rgba(0,0,0,0.2);
     background-clip: padding-box;
@@ -171,14 +287,20 @@ header{
 .novinka_obal_stred h2{
     font-size: 24px;
     margin-bottom: 15px;
+    height: 55px;
+    overflow: hidden;
 }
 .novinka_obal_stred p{
     font-size: 13px;
     line-height: 1.4;
+    height: 36px;
+    overflow: hidden;
+    margin: 0;
+    margin-bottom: 10px;
 }
 .novinka_detail{
     flex-shrink: 0;
-    background-image: linear-gradient(to right, #ffffff 0% 50%, #ecfaf3 50% 100%);
+    background-image: linear-gradient(to right, #ffffff 0% 50%, #e4f5ec 50% 100%);
     display: flex;
     align-items: flex-end;
 }
@@ -205,13 +327,42 @@ header{
     padding: 0;
     margin-left: 4px;
 }
+.slider-item-ratio .slider-container>::after {
+    display: block;
+    padding-top: 720px;
+    content: "";
+}
+
 @media (hover: none){
   .swiffy-slider:not(.slider-nav-touch) .slider-nav {
     display: inline-flex;
 }
   
 }
-
+@media screen and (max-width: 991px){
+    .novinka_obal_stred h2{
+        font-size: 22px;
+        height: 50px;
+        overflow: hidden;
+    }
+    .slider-item-ratio .slider-container>::after {
+        display: block;
+        padding-top: 680px;
+        content: "";
+    }
+}
+@media screen and (max-width: 575px){
+    .novinka_obal_stred h2{
+        font-size: 18px;
+        height: 42px;
+        overflow: hidden;
+    }
+    .slider-item-ratio .slider-container>::after {
+        display: block;
+        padding-top: 620px;
+        content: "";
+    }
+}
 
 
 
@@ -241,7 +392,9 @@ header{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding: 20px;
+    margin-top: 10px;
+    padding: 30px 25px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(255,255,255,0.4);
 }
 .contact .otv_doba > div{
     flex-shrink: 0;
@@ -251,17 +404,18 @@ header{
     
 }
 .contact .otv_doba > div:first-child{
-    padding-right: 20px 25px;
+    padding-right: 20px;
     flex-grow: 1;
 }
 .contact .otv_doba h3{
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 500;
     margin: 0;
     margin-bottom: 10px;
 }
 .contact .otv_doba span{
     display: flex;
+    line-height: 1.4;
 }
 .contact .otv_doba b{
     font-weight: 500;
@@ -275,6 +429,7 @@ header{
 }
 .products{
     background-color: #ecfaf3;
+    background-image: linear-gradient(-55deg, #e4f5ec 0% 50%, #ecfaf3 50% 100%);
     padding: 60px 0;
     border-top: 8px solid rgba(0,0,0,0.2);
     border-bottom: 8px solid rgba(0,0,0,0.2);
@@ -341,6 +496,35 @@ header{
     right: -5px;
     box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.5)
 }
+@media screen and (max-width: 575px){
+    .products-grid{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .contact .otv_doba{
+        flex-direction: column;
+    }
+    .contact .otv_doba > div:first-child {
+        padding-right: 0px;
+        padding-bottom: 20px;
+        flex-grow: 1;
+    }
+    .contact .otv_doba > div:first-child span{
+        
+    justify-content: center;
+    }
+    .contact .otv_doba b {
+        font-weight: 500;
+        width: 60px;
+    }
+}
+
+
+
+
 
 .other-pharmacies{
     padding-top: 80px;
@@ -358,6 +542,14 @@ header{
     background: rgba(0,0,0,0.5);
     margin-bottom: 30px;
 }
+@media screen and (max-width: 575px){
+    .other-pharmacies-wrap{
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+}
+
 
 .other-logos{
     display: block;
@@ -408,6 +600,19 @@ header{
 .pharmacies-wrap a{
     text-align: center;
 }
+@media screen and (max-width: 991px){
+    .pharmacies-wrap{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 575px){
+    .pharmacies-wrap{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
 .copyright{
     background-color: #ecfaf3;
     border-top: 8px solid rgba(0,0,0,0.2);
@@ -425,6 +630,14 @@ header{
 .copyright__author{
     padding-left: 10px;
 }
+@media screen and (max-width: 575px){
+    .copyright__wrap{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 
 .sipka_plovouci{
     position: fixed;
@@ -435,4 +648,31 @@ header{
 }
 .sipka_plovouci a{
     display: flex;
+}
+@media screen and (max-width: 991px){
+    .sipka_plovouci{
+        display: none;
+    }
+}
+.section-symbol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .section-symbol{
+    margin-bottom: -8px;
+}
+
+@media (max-width: 992px){
+.slider-nav::after {
+    width: 16px!important;
+    height: 16px!important;
+    padding: 0rem!important;
+}
+.swiffy-slider {
+    --swiffy-slider-track-height: 0rem;
+    --swiffy-slider-item-reveal: 0rem;
+    --swiffy-slider-item-count: 1;
+    --swiffy-slider-nav-zoom: 1;
+}
 }
