@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
     font-size: 16px;
     background-color: #056839;
-    background-image: url("../img/bg.png");
+    background-image: url("../images/bg.png");
     font-family: 'Roboto', sans-serif;
 }
 a {
@@ -197,6 +197,7 @@ header{
     flex-direction: column;
     height: 100%;
     margin-top: -120px;
+    background-image: linear-gradient(-30deg, rgba(0,0,0,0.25) 0% 50%, rgba(0,0,0,0.1) 50% 100%);
 }
 .hero-content h1{
     text-transform: none;
@@ -205,14 +206,22 @@ header{
 .hero-content a{
     color: white;
 }
+.hero-content a img{
+    height: auto;
+}
 .hero-content .text_obsah_text{
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
     line-height: 1.4;
     font-size: 15px;
 }
 .hero-content .btn{
     font-size: 18px;
+}
+.hero-card{
+    position: absolute;
+    right: 25%;
+    bottom: 35px;
 }
 @media screen and (max-width: 991px){
     .hero .section-symbol{
@@ -220,6 +229,9 @@ header{
     }
     .hero .container{
         
+    }
+    .hero-card{
+        display: none;
     }
 }
 @media screen and (max-width: 767px){
@@ -329,7 +341,7 @@ header{
 }
 .slider-item-ratio .slider-container>::after {
     display: block;
-    padding-top: 720px;
+    padding-top: 620px;
     content: "";
 }
 
@@ -347,7 +359,7 @@ header{
     }
     .slider-item-ratio .slider-container>::after {
         display: block;
-        padding-top: 680px;
+        padding-top: 600px;
         content: "";
     }
 }
@@ -359,7 +371,7 @@ header{
     }
     .slider-item-ratio .slider-container>::after {
         display: block;
-        padding-top: 620px;
+        padding-top: 560px;
         content: "";
     }
 }
@@ -379,10 +391,13 @@ header{
     text-align: center;
     display: flex;
     justify-content: center;
+    background: radial-gradient(rgba(81, 255, 172, 0.4), transparent 60%);
+    padding-top: 20px;
+    cursor: pointer;
 }
 .contact .otv_doba{
     background: #a45e2d;
-    background-image: url("../img/table-contact.png");
+    background-image: url("../images/table-contact.png");
     border: 1px solid #5e2a0d;
     width: 100%;
     max-width: 420px;
@@ -398,14 +413,16 @@ header{
 }
 .contact .otv_doba > div{
     flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
     font-size: 14px;
+    width: auto !important;
+    float: none !important;
     
 }
 .contact .otv_doba > div:first-child{
     padding-right: 20px;
     flex-grow: 1;
+    width: auto !important;
+    float: none !important;
 }
 .contact .otv_doba h3{
     font-size: 24px;
@@ -448,6 +465,7 @@ header{
     position: relative;
     background-color: #fff;
     text-decoration: none;
+    cursor: pointer;
 }
 .produkt_cena{
     position: absolute;
@@ -482,6 +500,10 @@ header{
     max-height: 100%;
     -o-object-fit: contain;
     object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .produkt_nazev{
     padding: 15px;
@@ -529,6 +551,9 @@ header{
 .other-pharmacies{
     padding-top: 80px;
 }
+.other-pharmacies  .container{
+    background: radial-gradient(rgba(81, 255, 172, 0.4), transparent 50%);
+}
 .other-pharmacies h1{
     color: white;
     text-align: center;
@@ -567,11 +592,12 @@ header{
     border-bottom: 1px solid #dddddd;
     line-height: 1;
 }
-.other-logos-wrap{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+.other-logos-wrap > div{
+    display: flex;
+    justify-content: center;
     grid-gap: 20px;
     padding: 20px;
+    flex-wrap: wrap;
 }
 .other-logos-wrap span{
     display: flex;
@@ -676,3 +702,67 @@ footer .section-symbol{
     --swiffy-slider-nav-zoom: 1;
 }
 }
+
+
+#TB_window{
+    max-width: 100vw;
+      
+margin: 0 !important;
+  transform: translate(-50%, -50%);
+}
+#TB_iframeContent{
+max-width: 100%;
+}
+
+#TB_window{
+    max-width: 100vw;
+      
+margin: 0 !important;
+  transform: translate(-50%, -50%);
+}
+#TB_iframeContent{
+max-width: 100%;
+}
+.slider-container > li  .clear{
+display: none !important;
+}
+.novinka_obal_stred {
+  order: 1;
+flex-grow: 1;
+}
+.novinka_datum {
+
+  order: 0;
+}
+.novinka_detail {
+
+  order: 2;
+}
+.novinka_datum::before{
+content: "";
+height: 46px;
+background-image: url("../images/datum-symbol.png");
+width: 46px;
+}
+.novinka_datum_in br{
+display: none;
+}
+
+.produkt_obr::before{
+    content: "";
+    height: 58px;
+    width: 58px;
+    display: flex;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background-image: url("https://www.lekarna-magnus.cz/images/add-cart.png");
+  }
+
+  @media screen and (max-width: 991px){
+
+    .produkt_obr::before{
+        content: none;
+    }
+
+  }

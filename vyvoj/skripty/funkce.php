@@ -123,7 +123,7 @@ function novinky_uvod()
 $query_novinky = MySQL_Query("SELECT * FROM aktuality6 WHERE aktivni=1 AND lang='".__LANG__."' ORDER BY datum DESC, id DESC") or die(err(1));
 
 
-echo '<ul id="slider">';
+echo '<ul id="slider" class="slider-container">';
 
 $x = 1;
  while ($row_novinky = MySQL_fetch_object($query_novinky))
@@ -137,7 +137,7 @@ $x = 1;
 	   {
 			   if($x==1)
 				{
-				echo '<li>';
+				echo '<li class="slide-visible"><div class="novinka_obal-wrap">';
 				}
 			   
 		
@@ -145,7 +145,7 @@ $x = 1;
 						<div class="novinka_obal_stred">
 						<h2>'.stripslashes($row_novinky->nadpis).'</h2>
 						<div class="clear" style="height: 15px;"></div>
-						'.stripslashes($row_novinky->perex).'
+						<p>'.stripslashes($row_novinky->perex).'</p>
 						</div>
 						
 						<div class="novinka_datum">
@@ -168,7 +168,7 @@ $x = 1;
 					
 				if($x==4 || $x==8 || $x==12 || $x==16 || $x==20)
 				{
-				echo '</li><li>';
+				echo '</div></li><li><div class="novinka_obal-wrap">';
 				}
 					
 					$x++;
@@ -227,10 +227,10 @@ function produkty_uvod($x)
 			 
 			 echo '<div class="produkt_obal" ';
 				if($a%3==0){echo ' style="margin-right: 0px;" ';}
-			 echo '  onclick="self.location.href=\'http://best-lekarna.cz'.$url.'\'" title="'.stripslashes($row_p->nazev).'">';
+			 echo '  onclick="self.location.href=\'https://best-lekarna.cz'.$url.'\'" title="'.stripslashes($row_p->nazev).'">';
 			 
 			 echo '<div class="produkt_cena">'.$cena_s_dph.' Kč</div>';
-			 echo '<div class="produkt_obr"><img src="http://best-lekarna.cz/img_produkty/stredni/'.$row_p->ONAZ.'" 
+			 echo '<div class="produkt_obr"><img src="https://best-lekarna.cz/img_produkty/stredni/'.$row_p->ONAZ.'" 
 			 alt="'.stripslashes($row_p->nazev).'" title="'.stripslashes($row_p->nazev).'" /></div>';
 			 echo '<div class="produkt_nazev">'.stripslashes($row_p->nazev).'</div>';
 
