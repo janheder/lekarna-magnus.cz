@@ -28,7 +28,7 @@ globalni_pr();
 width: auto; 
 margin: 20px;
 padding: 20px; 
-font-size: 16px; 
+font-size: 14px; 
 font-family: Arial, Tahoma, Verdana;
 color: #4A4A4A;	
 background-color: #ffffff;
@@ -54,11 +54,19 @@ text-decoration: underline;
 <?
 echo "<div class=\"obal\">";
 
-
-	$query_k = MySQL_Query("SELECT * FROM stranky6 WHERE id='3'") or die(err(1));
-    $row_k = MySQL_fetch_object($query_k);
-	echo stripslashes($row_k->obsah);
-
+if($_GET['idn'])
+{
+	$query_novinky = MySQL_Query("SELECT * FROM aktuality4 WHERE id='".intval($_GET['idn'])."'") or die(err(1));
+    $row_novinky = MySQL_fetch_object($query_novinky);
+	echo stripslashes($row_novinky->text);
+	echo '<div style="width: auto; margin-top: 20px; color: #056839;">';
+	echo 'Autor: '.$row_novinky->autor.' | zdroj: '.$row_novinky->zdroj;
+	echo '</div>';
+}
+else
+{
+echo 'Chybí ID novinky.';
+}
 
 echo "</div>";
 ?>

@@ -69,14 +69,14 @@ $row_seo = MySQL_fetch_object($menu_seo);
     ?>" lang="cs" />
 
     <meta content="Eline.cz" name="author">
-    <link rel="canonical" href="https://lekarna-magnus.cz">
+    <link rel="canonical" href="https://lekarna-avion.cz/">
 
     <meta property="og:locale" content="cs_CZ">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Lékárna-magnus.cz">
+    <meta property="og:title" content="Lékárna-avion.cz">
     <meta property="og:description" content="Kamenná lékárna Vrbno pod Pradědem, Jeseníky, prodej léku, léky na předpis Lékárna-Magnus.cz">
-    <meta property="og:url" content="https://lekarna-magnus.cz">
-    <meta property="og:site_name" content="lekarna-magnus.cz">
+    <meta property="og:url" content="https://lekarna-avion.cz">
+    <meta property="og:site_name" content="lekarna-avion.cz">
 
     <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
@@ -117,38 +117,39 @@ $row_seo = MySQL_fetch_object($menu_seo);
     </script>
 
 
-    <script type="text/plain" data-cookiecategory="performance">
+<script  type="text/plain" data-cookiecategory="performance">
 
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-40026181-7']);
-      _gaq.push(['_trackPageview']);
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-40026181-8']);
+  _gaq.push(['_trackPageview']);
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 
-    </script> 
-  </head>
-  <body>
+</script> 
 
-    <div id="fb-root"></div>
-    <script type="text/plain" data-cookiecategory="tracking" >(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/cs_CZ/all.js#xfbml=1";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script type="text/plain" data-cookiecategory="tracking" >(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/cs_CZ/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
 
     <header id="top">
       <div class="container">
         <div class="header-inner">
-          <a href=""><img src="images/logo.png"></a>
+          <a href=""><img src="images/logo-avio.png"></a>
           <nav>
-          <a href="#kontakt" class="scrollPage">Otevírací doba</a>
+            <div id="closeMenu"><img src="images/cross.svg"></div>
+          <a href="#kontakt" class="scrollPage" id="openHours">Otevírací doba</a>
             <a href="https://www.best-erecept.cz/">E-recept</a>
             <a href="http://www.best-lekarna.cz/">Eshop</a>
             <a href="./skripty/kontakt.php?keepThis=true&amp;TB_iframe=true&amp;height=400&amp;width=800" title="Kontakt" class="thickbox">Kontakt</a>
@@ -172,9 +173,7 @@ $row_seo = MySQL_fetch_object($menu_seo);
           $query_text = MySQL_Query("SELECT * FROM stranky6 WHERE str='uvod' ") or die(err(1));
           $row_text = MySQL_fetch_object($query_text);
           ?>
-            <h1>			<?
-			echo stripslashes($row_text->nadpis);
-			?>
+            <h1>			Lékárna Avio
       </h1>
             <p class="text_obsah_text">
             <?

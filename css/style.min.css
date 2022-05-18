@@ -529,10 +529,14 @@ header{
     .contact .otv_doba{
         flex-direction: column;
     }
+    .contact .otv_doba > div{
+                font-size: 16px !important;
+    }
     .contact .otv_doba > div:first-child {
         padding-right: 0px;
         padding-bottom: 20px;
         flex-grow: 1;
+
     }
     .contact .otv_doba > div:first-child span{
         
@@ -756,7 +760,7 @@ display: none;
     position: absolute;
     bottom: -5px;
     right: -5px;
-    background-image: url("https://www.lekarna-magnus.cz/images/add-cart.png");
+    background-image: url("../images/add-cart.png");
   }
 
   @media screen and (max-width: 991px){
@@ -765,4 +769,43 @@ display: none;
         content: none;
     }
 
+  }
+
+
+  #closeMenu{
+      display: none;
+  }
+
+  @media screen and (max-width: 991px){
+
+    #closeMenu{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 10px 20px;
+    }
+  
+
+  }
+
+
+  #TB_closeAjaxWindow{
+    position: absolute;
+  right: 0;
+top: 10px;
+}
+#TB_ajaxWindowTitle{
+padding-right: 60px;
+}
+
+
+.contact .otv_doba img{
+    display: none;
+  }
+  .contact .otv_doba b{
+    display: inline;
+  }
+  .contact .otv_doba > div:last-child span{
+    display: inline-block;
+    line-height: 1.6;
   }

@@ -28,7 +28,7 @@ globalni_pr();
 width: auto; 
 margin: 20px;
 padding: 20px; 
-font-size: 14px; 
+font-size: 16px; 
 font-family: Arial, Tahoma, Verdana;
 color: #4A4A4A;	
 background-color: #ffffff;

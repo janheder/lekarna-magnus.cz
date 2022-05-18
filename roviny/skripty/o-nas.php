@@ -28,7 +28,7 @@ globalni_pr();
 width: auto; 
 margin: 20px;
 padding: 20px; 
-font-size: 16px; 
+font-size: 14px; 
 font-family: Arial, Tahoma, Verdana;
 color: #4A4A4A;	
 background-color: #ffffff;
@@ -55,7 +55,7 @@ text-decoration: underline;
 echo "<div class=\"obal\">";
 
 
-	$query_k = MySQL_Query("SELECT * FROM stranky6 WHERE id='3'") or die(err(1));
+	$query_k = MySQL_Query("SELECT * FROM stranky4 WHERE id='4'") or die(err(1));
     $row_k = MySQL_fetch_object($query_k);
 	echo stripslashes($row_k->obsah);
 
